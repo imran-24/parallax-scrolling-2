@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parallax scrolling | vanillla javascript </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav class="navbar">
+		<a class="logo" href="#">LOGO</a>
+		<ul class="navlinks">
+			<li >
+				<a class="active" href="#">Home </a>				
+			</li>
+			<li>
+				<a href="#">About </a>
+			</li>
+			<li>
+				<a href="#">Work </a>
+			</li>
+
+			<li>
+				<a href="#">Contact </a>
+			</li>
+		</ul>
+	</nav>
+	<section>
+		<img id="star" src="images/stars.png">
+		<img id="moon" src="images/moon.png">
+		<img id="m_b" src="images/mountains_behind.png">
+		<h2 class="text">Moon Light</h2>
+		<a href="#" class="btn">Explore</a>
+
+		<img id="m_f" src="images/mountains_front.png">
+	</section>
+	<div class="sec">
+		<h2>Parallax Scrolling Effects</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<script type="text/javascript">
+		let star = document.getElementById("star");
+		let moon = document.getElementById("moon");
+		let mountain_behind = document.getElementById("m_b");
+		let mountain_front = document.getElementById("m_f"); 
+		let text = document.querySelector(".text");
+
+		window.addEventListener("scroll",function(){
+			var value = window.scrollY;
+			star.style.left = value * .5 + 'px';
+			moon.style.top = value * 1.5 + 'px';
+			mountain_behind.style.top = value * .5 + 'px';
+			mountain_front.top = value * 0 + 'px';
+			text.style.marginRight = value * 3 + 'px';
+			text.style.margintop = value * 1.5 + 'px';
+		})
+	</script>
+</body>
+</html>
